@@ -13,5 +13,14 @@ namespace RefresherTest
     /// </summary>
     public partial class App : Application
     {
+        public void Application_Start(object sender, StartupEventArgs e)
+
+        {
+            MainWindow wnd = new MainWindow();
+            if (e.Args.Length == 1)
+               // MessageBox.Show("Now opening file: \n\n" + e.Args[0]);
+            wnd.Show();
+        }
+
     }
 }
